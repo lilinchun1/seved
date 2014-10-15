@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<meta name="format-detection" content="telephone=no">
+<title>Document</title>
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/simple-app.css">
+</head>
+<body>
+<div class="swiper-pages swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="swiper-container scroll-container swiper-gallery">
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/1.jpg" alt=""></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container scroll-container swiper-gallery">
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/2.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container scroll-container swiper-gallery">
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/3.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container scroll-container swiper-gallery">
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/4.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container scroll-container swiper-gallery">
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/5.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slide-btn">
+    <div class="slide-btn-con">
+        <a class="left-btn" id="J_code">立即购买</a>
+        <a class="right-btn" href="">分享好友</a>
+    </div>
+</div>
+<div class="overlay" id="J_overlay"></div>
+<div class="modal" id="con1">
+    <p>
+        sn:1jpc1287jitr45zoo90
+    </p>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/idangerous.swiper.scrollbar-2.0.js"></script>
+<script src="js/simple-app.js"></script>
+<script>
+    window.onload = function () {
+        var btn_text = document.getElementById("J_code");
+        var overlay = document.getElementById("J_overlay");
+        var con1 = document.getElementById("con1");
+        btn_text.onclick = function () {
+            var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+            overlay.style.display = "block";
+            con1.style.display = "block";
+            overlay.style.height = document.body.clientHeight + scrolltop + 'px';
+        };
+        overlay.onclick = function () {
+            overlay.style.display = "none";
+            con1.style.display = "none";
+        };
+    }
+</script>
+</body>
+</html>

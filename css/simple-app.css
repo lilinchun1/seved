@@ -50,6 +50,7 @@ body {
 }
 .scroll-container .swiper-slide {
 	width: 100%;
+    height: 100%;
 }
 .page-inner {
 	padding: 15px 20px;
@@ -113,11 +114,12 @@ input[type="submit"]:active {
 }
 .swiper-gallery .swiper-slide {
 	width: 100%;
+    height: 100%;
 	position: relative;
 	text-align: center;
 }
 .swiper-gallery .swiper-slide img {
-	opacity: 0.2;
+	/*opacity: 0.2;*/
 	width: auto;
 	height: auto;
 	max-width: 100%;
@@ -138,6 +140,7 @@ input[type="submit"]:active {
 
 /* Scrollbars */
 .swiper-scrollbar {
+    display: none;
 	position: absolute;
 	right: 5px;
 	top: 2%;
@@ -160,7 +163,8 @@ input[type="submit"]:active {
     z-index: 9;
     width: 100%;
     height: 52px;
-    background-image:linear-gradient(180deg, #fafafa, #9d9e9e);
+    /*background-image:linear-gradient(180deg, #fafafa, #9d9e9e);*/
+    background: url(../img/bg1.jpg) 0 0 repeat-x;
 }
 .slide-btn-con{
     margin: 10px auto;
@@ -168,7 +172,7 @@ input[type="submit"]:active {
     overflow: hidden;
 }
 .left-btn,
-.right-btn{
+.right-btn {
     width: 46%;
     height: 32px;
     border-radius: 5px;
@@ -178,7 +182,8 @@ input[type="submit"]:active {
     text-decoration: none;
     font-size: 1.6em;
     font-family: "Microsoft YaHei";
-    background-image:linear-gradient(180deg, #f6c206, #ef8254);
+    /*background-image:linear-gradient(180deg, #f6c206, #ef8254);*/
+    background:  url(../img/bg2.jpg) 0 0 repeat-x;
 }
 .left-btn {
     float: left;
@@ -211,3 +216,33 @@ input[type="submit"]:active {
 }
 
 .pop{ width:100%; height:100%; position:fixed; top:0px; left:0px;z-index:999999999; background:url(../img/pop.png) no-repeat rgba(0,0,0,0.7); background-size:100%;}
+
+.show-color li {
+    width: 60%;
+    height: 30px;
+    margin-bottom: 2px
+}
+
+.show-color li:nth-of-type(1) {
+    background: #7e7f80
+}
+
+.show-color li:nth-of-type(2) {
+    background: #37383a
+}
+
+.show-color li:nth-of-type(3) {
+    background: #742e49
+}
+
+.show-color li:nth-of-type(4) {
+    background: #8c7c0e
+}
+
+.show-color li:nth-of-type(5) {
+    background: #0072ff
+}
+
+.show-color li:nth-of-type(6) {
+    background: #591f88
+}
